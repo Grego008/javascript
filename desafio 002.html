@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <script>
+        function main() {
+            data=parseInt(prompt("digite a data:"));
+            dd=dia(data);
+            mm=mes(data);
+            aa=ano(data);
+            if(mm<=9){
+                if(dd<=9){
+                    console.log("0"+dd+"/0"+mm+"/"+aa);
+                }
+                else{
+                    console.log(dd+"/0"+mm+"/"+aa);
+                }
+            }
+            else {
+                if(dd<=9){
+                    console.log("0"+dd+"/"+mm+"/"+aa);
+                }
+                else {
+                console.log(dd+"/"+mm+"/"+aa);
+                }
+            }
+        }    
+    function ano(a) {
+        return parseInt(a/10000);
+    }
+    function mes(a) {
+        return parseInt((a/100)%100);
+    }
+    function dia(a) {
+        return parseInt(a%100);
+    }
+    </script>
+</head>
+<body onload="main()">
+</body>
+</html>
